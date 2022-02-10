@@ -2,11 +2,11 @@
 
 namespace OpenAdmin\Admin\ApiTester;
 
-use OpenAdmin\Admin\Facades\Admin;
-use OpenAdmin\Admin\Layout\Content;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Arr;
+use OpenAdmin\Admin\Facades\Admin;
+use OpenAdmin\Admin\Layout\Content;
 
 class ApiTesterController extends Controller
 {
@@ -19,7 +19,7 @@ class ApiTesterController extends Controller
 
             $content->body(view('api-tester::index', [
                 'routes' => $tester->getRoutes(),
-//                'logs'   => ApiLogger::load(),
+                //                'logs'   => ApiLogger::load(),
             ]));
         });
     }
@@ -30,7 +30,6 @@ class ApiTesterController extends Controller
         $uri = $request->get('uri');
         $user = $request->get('user');
         $all = $request->all();
-
 
         $keys = Arr::get($all, 'key', []);
         $vals = Arr::get($all, 'val', []);
@@ -51,7 +50,6 @@ class ApiTesterController extends Controller
         $tester = new ApiTester();
 
         $response = $tester->call($method, $uri, $parameters, $user);
-
 
         return $tester->parseResponse($response);
     }
