@@ -2,12 +2,12 @@
 
 namespace OpenAdmin\Admin\ApiTester;
 
-use OpenAdmin\Admin\Extension;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Routing\Route;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
+use OpenAdmin\Admin\Extension;
 use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -109,6 +109,7 @@ class ApiTester extends Extension
         }
 
         $this->app['auth']->guard($guard)->setUser($user);
+
         return true;
     }
 
@@ -153,7 +154,8 @@ class ApiTester extends Extension
         if (!empty($content->message)) {
             return $content->message;
         }
-        return "success";
+
+        return 'success';
     }
 
     /**
@@ -229,7 +231,7 @@ class ApiTester extends Extension
     {
         $routes = app('router')->getRoutes();
 
-        $prefix = static::config('prefix', "api");
+        $prefix = static::config('prefix', 'api');
         $routes = collect($routes)->filter(function ($route) use ($prefix) {
             return Str::startsWith($route->uri, $prefix);
         })->map(function ($route) {
