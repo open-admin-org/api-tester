@@ -1,0 +1,34 @@
+{
+    "name": "open-admin-ext/api-tester",
+    "description": "Api tester for open-admin",
+    "type": "library",
+    "keywords": ["open-admin", "api", "tester"],
+    "homepage": "https://github.com/open-admin-org/api-tester",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "open-admin",
+            "email": "info@open-admin.org"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "open-admin-org/open-admin": "~1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0",
+        "laravel/laravel": "~5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "OpenAdmin\\Admin\\ApiTester\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "OpenAdmin\\Admin\\ApiTester\\ApiTesterServiceProvider"
+            ]
+        }
+    }
+}
