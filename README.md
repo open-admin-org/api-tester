@@ -1,29 +1,29 @@
 API tester for laravel-admin
 ============================
 
-[![StyleCI](https://styleci.io/repos/99563385/shield?branch=master)](https://styleci.io/repos/99563385)
-[![Packagist](https://img.shields.io/packagist/l/laravel-admin-ext/api-tester.svg?maxAge=2592000)](https://packagist.org/packages/laravel-admin-ext/api-tester)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel-admin-ext/api-tester.svg?style=flat-square)](https://packagist.org/packages/laravel-admin-ext/api-tester)
+[![StyleCI](https://styleci.io/repos/457879925/shield?branch=main)](https://styleci.io/repos/99563385)
+[![Packagist](https://img.shields.io/packagist/l/open-admin-ext/api-tester.svg?maxAge=2592000)](https://packagist.org/packages/open-admin-ext/api-tester)
+[![Total Downloads](https://img.shields.io/packagist/dt/open-admin-ext/api-tester.svg?style=flat-square)](https://packagist.org/packages/open-admin-admin-ext/api-tester)
 [![Pull request welcome](https://img.shields.io/badge/pr-welcome-green.svg?style=flat-square)]()
 
-Inspired by [laravel-api-tester](https://github.com/asvae/laravel-api-tester).
 
-[Documentation](http://laravel-admin.org/docs/#/en/extension-api-tester) | [中文文档](http://laravel-admin.org/docs/#/zh/extension-api-tester)
+[Documentation](http://open-admin.org/docs/en/extension-api-tester)
 
 ## Screenshot
 
-![wx20170809-164424](https://user-images.githubusercontent.com/1479100/29112946-1e32971c-7d22-11e7-8cc0-5b7ad25d084e.png)
+![extention-api-tester](https://user-images.githubusercontent.com/86517067/153463990-bd59e3ac-bc88-4858-adac-2714cc08e705.png)
+
 
 ## Installation
 
 ```
-$ composer require laravel-admin-ext/api-tester -vvv
+$ composer require open-admin-ext/api-tester
 
 $ php artisan vendor:publish --tag=api-tester
 
 ```
 
-Then last run flowing command to import menu and permission: 
+Then last run flowing command to import menu and permission:
 
 ```
 $ php artisan admin:import api-tester
@@ -37,9 +37,9 @@ Finally open `http://localhost/admin/api-tester`.
 ```php
 
     'extensions' => [
-    
+
         'api-tester' => [
-        
+
             // route prefix for APIs
             'prefix' => 'api',
 
