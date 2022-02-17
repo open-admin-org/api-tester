@@ -37,7 +37,7 @@ trait BootExtension
      */
     public static function import()
     {
-        parent::createMenu('Api tester', 'api-tester', 'icon-sliders');
+        parent::createMenu('Api tester', 'api-tester', 'icon-sliders-h');
 
         parent::createPermission('Api tester', 'ext.api-tester', 'api-tester*');
     }
