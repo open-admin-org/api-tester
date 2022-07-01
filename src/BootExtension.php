@@ -19,7 +19,7 @@ trait BootExtension
     }
 
     /**
-     * Register routes for laravel-admin.
+     * Register routes for open-admin.
      *
      * @return void
      */
@@ -43,7 +43,7 @@ trait BootExtension
     }
 
     /**
-     * Import assets into laravel-admin.
+     * Import assets into open-admin.
      */
     public static function importAssets()
     {

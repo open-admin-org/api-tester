@@ -299,6 +299,8 @@
 
         function renderResponse(response) {
 
+            console.log(response.language);
+
             document.querySelector('.response-tabs #content pre code').innerHTML = response.content;
             document.querySelector('.response-tabs #headers pre code').innerHTML = response.headers;
             document.querySelector('.response-tabs #cookies pre code').innerHTML = response.cookies;

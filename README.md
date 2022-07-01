@@ -1,4 +1,4 @@
-API tester for laravel-admin
+API tester for open-admin
 ============================
 
 [![StyleCI](https://styleci.io/repos/457879925/shield?branch=main)](https://styleci.io/repos/99563385)
